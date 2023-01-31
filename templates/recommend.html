@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="main-head text-centre">
+      <h1 class="text-center text-3xl my-6"> WeldRight-Recommended Parameters for No Defect Weld
+  <h1 class="text-center text-3xl my-6"> Get Recommendation of  Welding Parameters Based on Given Conditions
+  </h1>
+  </div>
+
+  <section class="max-w-md p-6 mx-auto bg-white rounded-md shadow-xl dark:bg-gray-800">
+    <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white">Enter the Details </h2>
+
+    <form action="/recommend" method="POST">
+        <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-1">
+            <div>
+                <label class="text-gray-700 dark:text-gray-200" for="username">Humidity</label>
+                <input id="username" type="text"  name="humidity"class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+            </div>
+
+       
+        </div>
+
+        <div class="flex gap-6 justify-centre mt-6">
+            <button class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Reccomend</button>
+            <button class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Current Humidity</button>
+        </div>
+    </form>
+</section>
+<!-- ====== Table Section Start -->
+<section class="bg-white py-20 lg:py-[30px]">
+    <div class="container mx-auto">
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4">
+          <div class="max-w-full overflow-x-auto">
+            <table class="w-1/2 table-auto mx-auto">
+              <thead>
+                <tr class="bg-blue-400 text-center">
+                  <th
+                    class="w-1/6 min-w-[160px] border-l border-transparent py-5 px-2 text-lg font-semibold text-white "
+                  >
+                    Parameters
+                  </th>
+                  <th
+                    class="w-1/6 min-w-[160px] py-3 px-2 text-lg font-semibold text-white "
+                  >
+                    Recommended Values
+                  </th>
+    
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                  >
+                    Temperature
+                  </td>
+                  <td
+                    class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                  >
+                    {{temp}}
+    
+                </tr>
+             
+                <tr>
+                  <td
+                    class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                  >
+                    Humidity
+                  </td>
+                  <td
+                    class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                  >
+                    {{hum}}
+    
+                </tr>
+             
+                <tr>
+                  <td
+                    class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                  >
+                    Current
+                  </td>
+                  <td
+                    class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                  >
+                    {{curr}}
+    
+                </tr>
+             
+                <tr>
+                  <td
+                    class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                  >
+                    Flow
+                  </td>
+                  <td
+                    class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                  >
+                    {{flow}}
+    
+                </tr>
+             
+                <tr>
+                  <td
+                    class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                  >
+                    Job Temperature
+                  </td>
+                  <td
+                    class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                  >
+                    {{jobTemp}}
+    
+                </tr>
+             
+                <tr>
+                  <td
+                    class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] py-5 px-2 text-center text-base font-medium"
+                  >
+                    Voltage
+                  </td>
+                  <td
+                    class="text-dark border-b border-[#E8E8E8] bg-white py-5 px-2 text-center text-base font-medium"
+                  >
+                    {{vol}}
+    
+                </tr>
+             
+       
+             
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Table Section End -->
+  
+</body>
+</html>
